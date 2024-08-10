@@ -12,7 +12,8 @@ const HomePage = () => {
         <div className="w-full">
             
             {/* HERO SECTION */}
-            <section className={`bg-[url(${HeroImage})] bg-cover bg-center bg-no-repeat w-full h-[70vh] flex flex-col text-white/90 justify-center items-center p-6`}>
+            <section className={`bg-cover bg-center bg-no-repeat w-full h-[70vh] flex flex-col text-white/90 justify-center items-center p-6`}
+            style={{ backgroundImage: `url(${HeroImage})`}}>
                 <img src={Brand} alt="SMART Lab" />
                 <p className="text-2xl my-16">Welcome</p>
                 <p className="mt-8">
@@ -50,7 +51,8 @@ const HomePage = () => {
                 Our research focuses on:
                 </p>
                 {/* <ul className="list-image-[url(src/assets/images/list-style.png)] p-8 space-y-1"> */}
-                <ul className={`list-image-[url(${ListStyle1})] p-8 space-y-1`}>
+                <ul className={`p-8 space-y-1`}
+                style={{ listStyleImage: `url(${ListStyle1})`}}>
                     <li>Traffic Flow Optimization</li>
                     <li>IoT devices for infrastructure monitoring and traffic safety</li>
                     <li>Infrastructure capacity planning</li>
