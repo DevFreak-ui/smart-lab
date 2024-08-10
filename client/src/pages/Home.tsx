@@ -3,6 +3,8 @@ import Armstrong from "../assets/images/pi.png"
 import MemoryImage from "../assets/images/memoryImage.png"
 import NewsItem from "../components/News"
 import Footer from "../components/Footer"
+import HeroImage from "../assets/images/hero-home-bg.png"
+import ListStyle1 from "../assets/images/list-style.png"
 
 const HomePage = () => {
     
@@ -10,7 +12,7 @@ const HomePage = () => {
         <div className="w-full">
             
             {/* HERO SECTION */}
-            <section className="bg-[url(src/assets/images/hero-home-bg.png)] bg-cover bg-center bg-no-repeat w-full h-[70vh] flex flex-col text-white/90 justify-center items-center p-6">
+            <section className={`bg-[url(${HeroImage})] bg-cover bg-center bg-no-repeat w-full h-[70vh] flex flex-col text-white/90 justify-center items-center p-6`}>
                 <img src={Brand} alt="SMART Lab" />
                 <p className="text-2xl my-16">Welcome</p>
                 <p className="mt-8">
@@ -19,7 +21,7 @@ const HomePage = () => {
             </section>
 
             {/* PROFILE */}
-            <section className="my-32 w-full flex w-3/5 mx-auto gap-4">
+            <section className="my-32 flex w-3/5 mx-auto gap-4">
                 <div className="w-1/2 px-12">
                     <h1 className="text-medium text-lg mb-4">PI: Dr. Armstrong Aboah</h1>
                     <p className="text-justify text-sm leading-5 text-black/70 my-2">
@@ -47,7 +49,8 @@ const HomePage = () => {
                 the Internet of Things (IoT) to design and deploy advanced transportation technologies. 
                 Our research focuses on:
                 </p>
-                <ul className="list-image-[url(src/assets/images/list-style.png)] p-8 space-y-1">
+                {/* <ul className="list-image-[url(src/assets/images/list-style.png)] p-8 space-y-1"> */}
+                <ul className={`list-image-[url(${ListStyle1})] p-8 space-y-1`}>
                     <li>Traffic Flow Optimization</li>
                     <li>IoT devices for infrastructure monitoring and traffic safety</li>
                     <li>Infrastructure capacity planning</li>
