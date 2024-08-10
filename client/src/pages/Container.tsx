@@ -1,11 +1,21 @@
+import { Outlet } from "react-router-dom"
+import TopNav from "../components/TopNav"
 
 const Container = () => {
 
     return(
-        <div className="w-screen h-screen flex flex-col items-center justify-center">
-            <h1 className="text-[50px] font-bold">SMART LAB</h1>
-            <p className="text-[25px] opacity-50">Under Construction</p>
-        </div>
+        <>
+			<div className="antialiased text-black max-w-screen">
+                <TopNav />
+
+				<main className="w-full">
+
+					{/* LOAD PAGES */}
+					<Outlet />
+
+				</main>
+			</div>
+		</>
     )
 }
 
