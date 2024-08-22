@@ -11,12 +11,15 @@ const PeoplesPage = () => {
         <div className="text-black/80">
 
             {/* HERO */}
-            <section className="w-full max-h-[60vh] overflow-y-hidden">
+            <section className="w-full max-h-[40vh] overflow-y-hidden relative">
                 <img src={HeroBg} alt="Group Picture" width={'100%'} />
+                <div className="w-full h-full absolute bg-black/50 flex items-center justify-center top-0">
+                    <h1 className="text-[27px] font-black text-white/90">People</h1>
+                </div>
             </section>
 
             {/* FACULTY */}
-            <section className="my-32 w-3/5 mx-auto">
+            <section className="my-12 sm:my-28 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
                 <h1 className="text-xl font-medium mb-12">Faculty</h1>
                 
                 <FacultyCard 
@@ -27,14 +30,14 @@ const PeoplesPage = () => {
                     coordinates="Civil Engineering Building, CE 201D"
                     ofc_phone="9312847657"
                     />
-                <hr className="bg-gray-300 my-12" />
+                <hr className="bg-gray-300 my-6 md:my-12" />
             </section>
 
             {/* STUDENTS */}
-            <section className="my-24 w-3/5 mx-auto">
+            <section className="my-12 md:my-24 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
                 <h1 className="text-xl font-medium mb-8">PhD Students</h1>
                 
-                <div className="grid md:grid-cols-2 gap-x-24 gap-y-12">
+                <div className="grid lg:grid-cols-2 gap-x-24 gap-y-12">
                     <StudentCard 
                         name="Blessing Agyei Kyem"
                         res_interests="Computer Vision, Multimodal Ai, Applications in Transport Systems"
@@ -54,7 +57,7 @@ const PeoplesPage = () => {
             </section>
 
             {/* OTHERS(MASTERS & UNDERGRADS) */}
-            <section className="my-24 w-3/5 mx-auto">
+            <section className="my-24 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
                 <h1 className="text-xl font-medium mb-8">Masters & Undergraduates</h1>
                 
                 <div className="grid md:grid-cols-2 gap-x-24 gap-y-12">
@@ -68,7 +71,7 @@ const PeoplesPage = () => {
             </section>
 
             {/* VISITORS */}
-            <section className="my-24 w-3/5 mx-auto">
+            <section className="my-24 w-3/5 md:w-3/5 tv:w-2/5 mx-auto">
                 <h1 className="text-xl font-medium mb-6">Visitors</h1>
 
                 <p className="text-gray-400 text-sm"> -- No data --</p>
@@ -76,7 +79,7 @@ const PeoplesPage = () => {
             </section>
 
             {/* ALUMNI */}
-            <section className="my-24 w-3/5 mx-auto">
+            <section className="my-24 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
                 <h1 className="text-xl font-medium mb-6">Alumni</h1>
                 
                 <AlumniCard 

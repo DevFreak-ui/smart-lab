@@ -7,8 +7,8 @@ interface newsitemprop {
 
 const NewsItem = ({date, details, newsPage}: newsitemprop) => {
     return (
-        <div className="my-1 flex space-x-6 text-sm">
-            <span className={`${!newsPage ? 'font-bold font-xs min-w-32' : 'min-w-16'} normal-case`}> {date} </span> 
+        <div className={`${!newsPage ? 'my-2 md:my-1' : 'my-1'} flex space-x-4 md:space-x-6 text-sm`}>
+            <span className={`${!newsPage ? 'font-bold font-xs md:min-w-28' : 'min-w-16'} normal-case`}> {date} </span> 
             <span>{details}</span>
         </div>
     )
