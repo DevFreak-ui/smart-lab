@@ -1,6 +1,6 @@
 import Brand from "../assets/images/hero-brand.svg"
 import Armstrong from "../assets/images/profiles/pi.png"
-import MemoryImage from "../assets/images/memoryImage.png"
+// import MemoryImage from "../assets/images/memoryImage.png"
 import NewsItem from "../components/News"
 import Footer from "../components/Footer"
 import HeroImage from "../assets/images/hero-home-bg.png"
