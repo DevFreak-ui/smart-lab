@@ -33,7 +33,7 @@ const ResearchPage = () => {
         <div className="text-black/80">
 
             {/* HERO */}
-            <section className="w-full max-h-[50vh] overflow-y-hidden relative">
+            <section className="max-h-[40vh] overflow-y-hidden relative">
                 <img src={ResearchBg} alt="Illustration" width={'100%'} />
                 <div className="w-full h-full absolute bg-black/50 flex items-center justify-center top-0">
                     <h1 className="text-[27px] font-black text-white/90">Research</h1>
@@ -42,7 +42,7 @@ const ResearchPage = () => {
 
 
             {/* PROJECTS */}
-            <section className="w-full p-4 xl:w-3/5 mx-auto my-16">
+            <section className="w-4/5 md:w-3/5 mx-auto my-8 sm:my-16">
                 {projects.map((item, index) => (
                     <ProjectItem
                         img_src={item.img_src}
@@ -55,12 +55,12 @@ const ResearchPage = () => {
 
 
             {/* SPONSORS */}
-            <section className="w-full p-4 my-32 xl:w-1/2 mx-auto">
-                <h1 className="pb-32 text-center">Our research has generously been supported by: </h1>
-                <div className="flex flex-col xl:flex-row justify-center gap-8 xl:gap-16">
-                    <img src={nsf} alt="" className="object-scale-down"/>
-                    <img src={sustein} alt="" className="object-scale-down"/>
-                    <img src={ec} alt="" className="object-scale-down"/>
+            <section className="w-full p-4 my-12 md:my-32 xl:w-1/2 mx-auto">
+                <h1 className="pb-12 md:pb-32 text-center">Our research has generously been supported by: </h1>
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 xl:gap-16">
+                    <img src={nsf} alt="" className="w-52 h-28 object-scale-down"/>
+                    <img src={sustein} alt="" className="w-52 object-scale-down"/>
+                    <img src={ec} alt="" className="w-52 object-scale-down"/>
                 </div>
             </section>
 

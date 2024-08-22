@@ -6,6 +6,7 @@ import Footer from "../components/Footer"
 import ContactUsBg from "../assets/images/contact-us.png"
 import { IoLocationSharp } from "react-icons/io5"
 import { FiPhoneCall } from "react-icons/fi"
+import { useMediaQuery } from "usehooks-ts"
 
 interface newsContainerProps {
     year: number,
@@ -37,6 +38,8 @@ const NewsContainer = ({year, children, handleClick}: newsContainerProps) => {
 
 
 const NewsPage = () => {
+
+    const isDesktop = useMediaQuery('(min-width: 1920px)')
 
     const news: NewsData  = {
         2024: {
@@ -83,16 +86,16 @@ const NewsPage = () => {
         <div className="text-black/80">
 
             {/* HERO */}
-            <section className="w-full max-h-[50vh] overflow-y-hidden relative">
+            <section className="w-full max-h-[40vh] overflow-y-hidden relative">
                 <img src={ResearchBg} alt="Illustration" width={'100%'} />
-                <div className="w-full h-full absolute bg-black/50 flex items-center justify-center top-0">
-                    <h1 className="text-[27px] font-black text-white/90">News</h1>
+                <div className="w-full h-full absolute bg-black/60 flex items-center justify-center top-0">
+                    <h1 className="text-[27px] md:text-[40px] font-bold text-white/90">News</h1>
                 </div>
             </section>
 
 
             {/* CONTENT */}
-            <section className="my-32 w-3/5 mx-auto">
+            <section className="my-12 md:my-28 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
                 <p className="text-sm font-normal my-12 before:content-['*'] before:text-red-500">
                     <span>Sorted from </span>
                     <a href="#" className="text-blue-400 underline">recent</a>
@@ -129,9 +132,9 @@ const NewsPage = () => {
 
 
             {/* CONTACT US */}
-            <section className="flex justify-center items-center my-32 py-16 pl-32 text-white/90 gap-5"
+            <section className="flex flex-col md:flex-row justify-center items-center mt-32 py-8 space-y-5 md:py-16 tv:py-28 md:pl-32 tv:pl-52 text-white/90 gap-5"
             style={{backgroundImage: `url(${ContactUsBg})`}}>
-                <div className="pl-12 w-1/3 text-lg space-y-10">
+                <div className="md:pl-12 w-4/5 md:w-1/3 md:text-lg tv:text-[24px] space-y-10">
                     <div className="flex space-x-6">
                         <span className="my-2"><IoLocationSharp/></span>
                         <p>
@@ -145,11 +148,11 @@ const NewsPage = () => {
                         <p>+1819 265 54586</p>
                     </div>
                 </div>
-                <div className="w-2/3 flex justify-center overflow-hidden px-8">
+                <div className="rounded-lg md:rounded-none w-4/5 md:w-2/3 tv:w-full flex justify-center overflow-hidden md:px-8">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2730.9888544978194!2d-96.80365350263533!3d46.897594732504345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1723971186716!5m2!1sen!2sgh"
-                        width="600"
-                        height="300"
+                        width={isDesktop ? '1200' : '600'}
+                        height={isDesktop ? '600' : '300'}
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"

@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className="w-full">
             
             {/* HERO SECTION */}
-            <section className={`bg-cover bg-center bg-no-repeat w-full h-[70vh] flex flex-col text-white/90 justify-center items-center p-6`}
+            <section className={`bg-cover bg-center bg-no-repeat w-full h-[90vh] tv:h-[50vh] flex flex-col text-white/90 justify-center items-center p-6 text-center`}
             style={{ backgroundImage: `url(${HeroImage})`}}>
                 <img src={Brand} alt="SMART Lab" />
                 <p className="text-2xl my-16">Welcome</p>
@@ -22,10 +22,10 @@ const HomePage = () => {
             </section>
 
             {/* PROFILE */}
-            <section className="my-32 flex w-3/5 mx-auto gap-4">
-                <div className="w-1/2 px-12">
+            <section className="my-12 md:my-32 p-4 flex flex-col-reverse md:flex-row w-4/5 md:w-3/5 tv:w-2/5 mx-auto gap-4">
+                <div className="w-full w-1/2">
                     <h1 className="text-medium text-lg mb-4">PI: Dr. Armstrong Aboah</h1>
-                    <p className="text-justify text-sm leading-5 text-black/70 my-2">
+                    <p className="text-justify text-xs sm:text-sm leading-4 md:leading-5 text-black/70 my-2">
                     Professor Armstrong is a resourceful Transportation Data Scientist and Assistant Professor 
                     at North Dakota State University. With a strong track record of successful research and extensive hands-on 
                     experience, he specializes in developing cutting-edge statistical modeling techniques, advanced computer 
@@ -33,25 +33,25 @@ const HomePage = () => {
                     His work spans across various domains, where he has served as both architect and application 
                     developer, utilizing machine learning models to tackle large-scale, complex challenges.
                     </p>
-                    <p className="text-justify text-sm leading-5 text-black/70">
+                    <p className="text-justify text-xs sm:text-sm leading-4 md:leading-5 text-black/70">
                     He received his PhD from the University of Missouri-Columbia, under the mentorship of Yaw Adu-Gyamfi.
                     </p>
                 </div>
-                <div className="w-1/2 flex justify-center">
-                    <img src={Armstrong} alt="Armstrong Aboah" width={"65%"} />
+                <div className="w-full w-1/2 flex justify-center">
+                    <img src={Armstrong} alt="Armstrong Aboah" className="w-[65%] tv:w-[50%]" />
                 </div>
             </section>
 
             {/* RESEARCH */}
-            <section className="my-32 bg-[#efefef]/80 py-8 px-32">
+            <section className="my-12 md:my-32 bg-[#efefef]/80 py-8 px-12 md:px-32 tv:px-96">
                 <h1 className="text-2xl font-medium my-6">Our Research</h1>
-                <p className="w-4/5">
+                <p className="w-4/5 text-sm sm:text-base">
                 At the SMART Lab, we leverage Big Data Analytics, Artificial Intelligence (AI), and 
                 the Internet of Things (IoT) to design and deploy advanced transportation technologies. 
                 Our research focuses on:
                 </p>
                 {/* <ul className="list-image-[url(src/assets/images/list-style.png)] p-8 space-y-1"> */}
-                <ul className={`p-8 space-y-1`}
+                <ul className={`p-8 space-y-1 text-sm sm:text-base`}
                 style={{ listStyleImage: `url(${ListStyle1})`}}>
                     <li>Traffic Flow Optimization</li>
                     <li>IoT devices for infrastructure monitoring and traffic safety</li>
@@ -62,7 +62,7 @@ const HomePage = () => {
             </section>
 
             {/* NEWS */}
-            <section className="my-32 w-full px-32">
+            <section className="my-12 md:my-32 w-4/5 md:w-3/5 mx-auto">
                 <h1 className="text-2xl font-medium my-6">News</h1>
                 <NewsItem 
                     date="JUL 08, 2024" 
@@ -85,8 +85,8 @@ const HomePage = () => {
             </section>
 
             {/* MEMORY */}
-            <section className="my-32 w-3/5 mx-auto text-sm text-center flex flex-col">
-                <img className="pt-8 pb-4" src={MemoryImage} alt="" />
+            <section className="my-12 md:my-32 w-3/5 mx-auto text-sm text-center flex flex-col">
+                <img className="pt-8 pb-4" src="" alt="Group Image" />
                 <i>A shot of the group at dinner and hangout party</i>
             </section>
 
