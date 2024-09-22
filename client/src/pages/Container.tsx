@@ -6,7 +6,9 @@ const Container = () => {
     return(
         <>
 			<div className="antialiased text-black max-w-screen">
-                <TopNav />
+                <div className="sticky top-0 z-50 bg-gray-100">
+                    <TopNav />
+                </div>
 
 				<main className="w-full">
 

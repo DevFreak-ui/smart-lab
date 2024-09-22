@@ -1,10 +1,19 @@
 import Brand from "../assets/images/hero-brand.svg"
 import Armstrong from "../assets/images/profiles/pi.png"
-// import MemoryImage from "../assets/images/memoryImage.png"
+import GalleryImage1 from "../assets/gallery/group_7.jpeg"
+import GalleryImage2 from "../assets/gallery/simulator_6.jpeg"
+import GalleryImage3 from "../assets/gallery/group_3.jpeg"
+import GalleryImage4 from "../assets/gallery/group_6.jpeg"
+import GalleryImage5 from "../assets/gallery/simulator_3.jpeg"
 import NewsItem from "../components/News"
 import Footer from "../components/Footer"
-import HeroImage from "../assets/images/hero-home-bg.png"
-import ListStyle1 from "../assets/images/list-style.png"
+import HeroImage from "../assets/gallery/setup_1.jpeg"
+import Paralax from "../assets/gallery/simulator_3.jpeg"
+import { Link } from "react-router-dom"
+import { FaArrowRight } from "react-icons/fa"
+import Proj1 from "../assets/images/project_thumbs/anomaly.jpg"
+import Pavement from "../assets/images/project_thumbs/pavement.gif"
+import Gaze from "../assets/images/project_thumbs/gaze.png"
 
 const HomePage = () => {
     
@@ -12,82 +21,153 @@ const HomePage = () => {
         <div className="w-full">
             
             {/* HERO SECTION */}
-            <section className={`bg-cover bg-center bg-no-repeat w-full h-[90vh] tv:h-[50vh] flex flex-col text-white/90 justify-center items-center p-6 text-center`}
+            <section className={`bg-cover bg-center bg-no-repeat w-full h-[90vh] tv:h-[70vh] flex flex-col text-white/90 justify-center items-center p-6 text-center relative`}
             style={{ backgroundImage: `url(${HeroImage})`}}>
-                <img src={Brand} alt="SMART Lab" />
-                <p className="text-2xl my-16">Welcome</p>
-                <p className="mt-8">
+                <div className="absolute inset-0 bg-black/50 z-10"></div>
+                <img src={Brand} alt="SMART Lab" className="max-w-[80%] lg:max-w-[60%] xl:max-w-[50%] z-20" />
+                <p className="text-2xl lg:text-3xl xl:text-4xl my-16 z-20">Welcome</p>
+                <p className="mt-8 text-lg lg:text-xl xl:text-2xl max-w-3xl z-20">
                 The <strong>S</strong>ustainable <strong>M</strong>obility and <strong>A</strong>dvanced <strong>R</strong>esearch in <strong>T</strong>ransportation Group
                 </p>
             </section>
 
             {/* PROFILE */}
-            <section className="my-12 md:my-32 p-4 flex flex-col-reverse md:flex-row w-4/5 md:w-3/5 tv:w-2/5 mx-auto gap-4">
-                <div className="w-full w-1/2">
-                    <h1 className="text-medium text-lg mb-4">PI: Dr. Armstrong Aboah</h1>
-                    <p className="text-justify text-xs sm:text-sm leading-4 md:leading-5 text-black/70 my-2">
-                    Professor Armstrong is a resourceful Transportation Data Scientist and Assistant Professor 
-                    at North Dakota State University. With a strong track record of successful research and extensive hands-on 
-                    experience, he specializes in developing cutting-edge statistical modeling techniques, advanced computer 
-                    vision systems, all designed to enhance transportation system management and operations. 
-                    His work spans across various domains, where he has served as both architect and application 
-                    developer, utilizing machine learning models to tackle large-scale, complex challenges.
+            <section className="my-12 md:my-32 p-4 flex flex-col-reverse md:flex-row w-4/5 md:w-3/5 tv:w-2/5 mx-auto gap-8">
+                <div className="w-full md:w-2/3">
+                    <h2 className="text-2xl lg:text-3xl font-semibold mb-6">About Dr. Armstrong Aboah</h2>
+                    <p className="text-justify text-sm sm:text-base leading-6 md:leading-7 text-black/80 mb-4">
+                    Dr. Armstrong Aboah is a distinguished Transportation Data Scientist and Assistant Professor 
+                    at North Dakota State University. With a proven track record of innovative research and extensive hands-on 
+                    experience, he specializes in developing cutting-edge statistical modeling techniques and advanced computer 
+                    vision systems, all designed to enhance transportation system management and operations.
                     </p>
-                    <p className="text-justify text-xs sm:text-sm leading-4 md:leading-5 text-black/70">
-                    He received his PhD from the University of Missouri-Columbia, under the mentorship of Yaw Adu-Gyamfi.
+                    <p className="text-justify text-sm sm:text-base leading-6 md:leading-7 text-black/80 mb-4">
+                    His work spans across various domains of transportation engineering and data science, where he has served as both 
+                    architect and application developer, utilizing machine learning models to tackle large-scale, complex challenges 
+                    in urban mobility and transportation safety.
+                    </p>
+                    <p className="text-justify text-sm sm:text-base leading-6 md:leading-7 text-black/80">
+                    Dr. Aboah received his PhD from the University of Missouri-Columbia, under the mentorship of Dr. Yaw Adu-Gyamfi, 
+                    and has since been at the forefront of integrating data-driven approaches into transportation research and education.
                     </p>
                 </div>
-                <div className="w-full w-1/2 flex justify-center">
-                    <img src={Armstrong} alt="Armstrong Aboah" className="w-[65%] tv:w-[50%]" />
+                <div className="w-full md:w-1/3 flex justify-center items-start md:pt-16">
+                    <img src={Armstrong} alt="Dr. Armstrong Aboah" className="w-full max-w-[300px] object-cover rounded-lg shadow-lg" />
                 </div>
             </section>
 
             {/* RESEARCH */}
-            <section className="my-12 md:my-32 bg-[#efefef]/80 py-8 px-12 md:px-32 tv:px-96">
-                <h1 className="text-2xl font-medium my-6">Our Research</h1>
-                <p className="w-4/5 text-sm sm:text-base">
-                At the SMART Lab, we leverage Big Data Analytics, Artificial Intelligence (AI), and 
-                the Internet of Things (IoT) to design and deploy advanced transportation technologies. 
-                Our research focuses on:
-                </p>
-                {/* <ul className="list-image-[url(src/assets/images/list-style.png)] p-8 space-y-1"> */}
-                <ul className={`p-8 space-y-1 text-sm sm:text-base`}
-                style={{ listStyleImage: `url(${ListStyle1})`}}>
-                    <li>Traffic Flow Optimization</li>
-                    <li>IoT devices for infrastructure monitoring and traffic safety</li>
-                    <li>Infrastructure capacity planning</li>
-                    <li>Large-scale transportation dataset analysis</li>
-                    <li>Machine learning for predictive modelling</li>
-                </ul>
+            <section className="relative h-screen overflow-hidden">
+                <div className="absolute inset-0 bg-cover bg-center bg-fixed z-0" style={{ backgroundImage: `url(${Paralax})` }}></div>
+                <div className="relative z-10 bg-black/60 h-full flex flex-col justify-center items-center text-white">
+                    <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/3 xl:w-1/2 bg-black/40 p-8 rounded-lg backdrop-blur-sm">
+                        <h1 className="text-xl lg:text-3xl xl:text-4xl font-bold mb-8 text-center">Our Research</h1>
+                        <p className="hidden md:block text-base sm:text-lg lg:text-xl xl:text-2xl mb-8 text-center">
+                        At the SMART Lab, we leverage cutting-edge technologies to revolutionize transportation:
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+                            <div className="bg-white/10 p-4 md:p-6 rounded-lg transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                                <h3 className="text-lg md:text-xl font-semibold mb-3">Big Data Analytics</h3>
+                                <p className="text-sm md:text-base">Analyzing large-scale transportation datasets for insights</p>
+                            </div>
+                            <div className="bg-white/10 p-6 rounded-lg transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                                <h3 className="text-lg md:text-xl font-semibold mb-3">Artificial Intelligence</h3>
+                                <p className="text-sm md:text-base">Developing machine learning models for predictive modeling</p>
+                            </div>
+                            <div className="bg-white/10 p-6 rounded-lg transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                                <h3 className="text-lg md:text-xl font-semibold mb-3">Internet of Things</h3>
+                                <p className="text-sm md:text-base">Deploying IoT devices for infrastructure monitoring and safety</p>
+                            </div>
+                            <div className="bg-white/10 p-6 rounded-lg transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                                <h3 className="text-lg md:text-xl font-semibold mb-3">Traffic Optimization</h3>
+                                <p className="text-sm md:text-base">Enhancing traffic flow and infrastructure capacity planning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             {/* NEWS */}
-            <section className="my-12 md:my-32 w-4/5 md:w-3/5 mx-auto">
-                <h1 className="text-2xl font-medium my-6">News</h1>
+            <section className="my-16 md:my-32 lg:my-40 xl:my-48 w-4/5 md:w-3/5 lg:w-2/3 xl:w-1/2 mx-auto">
+                <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-8">Latest News</h2>
                 <NewsItem 
-                    date="JUL 08, 2024" 
+                    date="AUG 15, 2023" 
                     details={
-                        <p>Congratulations! The SMART Lab received a seed grant from AI SUSTEIN</p>
+                        <p className="text-base lg:text-md xl:text-lg">Dr. Aboah awarded a seed grant from AI SUSTEIN for smart city transportation research.</p>
                     } 
                 />
                 <NewsItem 
-                    date="JUL 02, 2024" 
+                    date="JUL 02, 2023" 
                     details={
-                        <p>Congratulations! The SMART Lab was awarded an EDRF grant.</p>
+                        <p className="ttext-base lg:text-md xl:text-lg">SMART Lab's AI-driven traffic optimization system implemented in Fargo, ND.</p>
                     } 
                 />
                 <NewsItem 
-                    date="JUN 10, 2024" 
+                    date="JUN 10, 2023" 
                     details={
-                        <p>Excited to welcome two new Ph.D students (Blessing and Joshua) into my lab.</p>
+                        <p className="text-base lg:text-md xl:text-lg">Welcoming two new Ph.D. students, Blessing and Joshua, to the SMART Lab team.</p>
                     } 
                 />
+                <div className="mt-8 text-center">
+                    <Link to="/news" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Read More
+                    </Link>
+                </div>
+            </section>
+
+            {/* PROJECTS */}
+            <section className="my-16 md:my-32 w-full md:w-4/5 px-8 tv:w-3/5 mx-auto">
+                <h2 className="text-lg lg:text-xl xl:text-3xl tv:text-4xl font-bold mb-12 text-center">Our Recent Projects</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="relative pb-24">
+                        <div className="overflow-hidden shadow-lg">
+                            <img src={Proj1} alt="Traffic Anomaly Detection" className="w-full h-52 object-cover" />
+                        </div>
+                        <div className="absolute bottom-0 left-4 right-4 bg-blue-900 text-white rounded-lg shadow-lg p-4">
+                            <h3 className="text-xl font-semibold mb-2">Traffic Anomaly Detection</h3>
+                            <p className="text-sm mb-4">Vision-based system for detecting traffic anomalies using deep learning.</p>
+                            <Link to="/research" className="text-blue-300 hover:text-blue-100 flex items-center">
+                                Read More <FaArrowRight className="ml-2" />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="relative pb-24">
+                        <div className="overflow-hidden shadow-lg">
+                            <img src={Pavement} alt="Pavement Condition Analysis" className="w-full h-52 object-cover" />
+                        </div>
+                        <div className="absolute bottom-0 left-4 right-4 bg-blue-900 text-white rounded-lg shadow-lg p-4">
+                            <h3 className="text-xl font-semibold mb-2">Pavement Condition Analysis</h3>
+                            <p className="text-sm mb-4">Multitask learning framework for estimating pavement condition indices from images.</p>
+                            <Link to="/research" className="text-blue-300 hover:text-blue-100 flex items-center">
+                                Read More <FaArrowRight className="ml-2" />
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="relative pb-24">
+                        <div className="rounded-lg overflow-hidden shadow-lg">
+                            <img src={Gaze} alt="Gaze-Guided Analysis" className="w-full h-52 object-cover" />
+                        </div>
+                        <div className="absolute bottom-0 left-4 right-4 bg-blue-900 text-white rounded-lg shadow-lg p-4">
+                            <h3 className="text-xl font-semibold mb-2">Gaze-Guided Analysis</h3>
+                            <p className="text-sm mb-4">GazeGNN: A gaze-guided graph neural network for chest X-ray classification.</p>
+                            <Link to="/research" className="text-blue-300 hover:text-blue-100 flex items-center">
+                                Read More <FaArrowRight className="ml-2" />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             {/* MEMORY */}
-            <section className="my-12 md:my-32 w-3/5 mx-auto text-sm text-center flex flex-col">
-                <img className="pt-8 pb-4" src="" alt="Group Image" />
-                <i>A shot of the group at dinner and hangout party</i>
+            <section className="my-16 md:my-32 xl:my-38 w-4/5 lg:w-3/4 xl:w-2/3 mx-auto">
+                <h2 className="text-lg lg:text-xl xl:text-3xl tv:text-4xl font-bold mb-8 text-center">Gallery</h2>
+                <div className="grid grid-cols-3 gap-3">
+                    <img className="col-span-2 row-span-2 w-full h-64 object-cover rounded-lg shadow-lg" src={GalleryImage1} alt="SMART Lab mEMBERS" />
+                    <img className="w-full h-32 object-cover rounded-lg shadow-lg" src={GalleryImage2} alt="Team collaboration" />
+                    <img className="w-full h-32 object-cover rounded-lg shadow-lg" src={GalleryImage3} alt="Lab equipment" />
+                    <img className="w-full h-64 object-cover rounded-lg shadow-lg" src={GalleryImage4} alt="Conference presentation" />
+                    <img className="col-span-2 row-span-2 w-full h-64 object-cover rounded-lg shadow-lg" src={GalleryImage5} alt="Field work" />
+                </div>
             </section>
 
             {/* FOOTER */}
