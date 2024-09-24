@@ -26,6 +26,7 @@ const HomePage = () => {
                 <div className="absolute inset-0 bg-black/50 z-10"></div>
                 <img src={Brand} alt="SMART Lab" className="max-w-[80%] lg:max-w-[60%] xl:max-w-[50%] z-20" />
                 <p className="text-2xl lg:text-3xl xl:text-4xl my-16 z-20">Welcome</p>
+                <p className="text-lg lg:text-xl xl:text-2xl !my-0 z-20">to</p>
                 <p className="mt-8 text-lg lg:text-xl xl:text-2xl max-w-3xl z-20">
                 The <strong>S</strong>ustainable <strong>M</strong>obility and <strong>A</strong>dvanced <strong>R</strong>esearch in <strong>T</strong>ransportation Group
                 </p>
