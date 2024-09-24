@@ -60,11 +60,11 @@ const FacultyCard = (
                 }
 
                 <div className="flex gap-5 text-gray-500 pt-8">
-                    <a href={g_scholar_link || "#"} target="_blank"><FaGoogleScholar  size={25} /></a>
-                    <a href={cv_link || "#"} target="_blank"><BsFileEarmarkText  size={25} /></a>
-                    <a href={linkedIn || "#"} target="_blank"><BsLinkedin  size={25} /></a>
-                    <a href={github || "#"} target="_blank"><FaGithub  size={25} /></a>
-                    <a href={`mailto:${email}` || "#"} target="_blank"><MdOutlineMarkEmailUnread  size={25} /></a>
+                    <a href={g_scholar_link || "#"} className="hover:text-blue-500 hover:scale-110" target="_blank"><FaGoogleScholar  size={25} /></a>
+                    <a href={cv_link || "#"} className="hover:text-blue-500 hover:scale-110" target="_blank"><BsFileEarmarkText  size={25} /></a>
+                    <a href={linkedIn || "#"} className="hover:text-blue-500 hover:scale-110" target="_blank"><BsLinkedin  size={25} /></a>
+                    <a href={github || "#"} className="hover:text-blue-500 hover:scale-110" target="_blank"><FaGithub  size={25} /></a>
+                    <a href={`mailto:${email}` || "#"} className="hover:text-blue-500 hover:scale-110" target="_blank"><MdOutlineMarkEmailUnread  size={25} /></a>
                 </div>
 
             </div>
@@ -97,9 +97,15 @@ const StudentCard = ({image_src, name, res_interests, site, github, linkedIn, ex
                     <p className="italic py-2"> {extra} </p>
                 ): (
                     <div className="flex text-blue-300 space-x-4 mt-4 items-center justify-center sm:justify-start">
-                        <a href={site || "#"} target="_blank"><IoIosGlobe  size={23} /></a>
-                        <a href={github || "#"} target="_blank"><FaGithub  size={20} /></a>
-                        <a href={linkedIn || "#"} target="_blank"><BsLinkedin  size={18} /></a>
+                        {site && (
+                            <a href={site || "#"} className="hover:text-blue-500 hover:scale-110" target="_blank"><IoIosGlobe  size={23} /></a>
+                        )}
+                        {github && (
+                            <a href={github || "#"} className="hover:text-blue-500 hover:scale-110" target="_blank"><FaGithub  size={20} /></a>
+                        )}
+                        {linkedIn && (
+                            <a href={linkedIn || "#"} className="hover:text-blue-500 hover:scale-110" target="_blank"><BsLinkedin  size={18} /></a>
+                        )}
                     </div>
                 )}
             </div>
@@ -109,42 +115,47 @@ const StudentCard = ({image_src, name, res_interests, site, github, linkedIn, ex
 
 const AlumniCard = ({name, degree_completed, year_completed, co_advisor_name, dissertation, now_at, extra}: alumniCarProps) => {
     return (
-        <div className="text-sm">
-            {/* Student Name */}
-            <a href="#" className="text-blue-500">{name}</a>,
-
-            {/* Title of Degree Completed */}
-            <span> {degree_completed} </span>
-
-            {/* Year of Degree Completion */}
-            {year_completed && <span> ({year_completed}), </span>}
-
-            {/* Co-Advisor */}
-            {co_advisor_name && (
-                <>
-                <strong>co-advised by </strong> 
-                <span>{co_advisor_name}</span>, 
-                </>
-            )}
+        <div className="text-md flex items-start">
+            {/* Hollow Circle */}
+            <div className="w-2 h-2 border-2 border-gray-400 rounded-full mt-1 mr-2"></div>
             
-            {/* Dissertation */}
-            {dissertation && (
-                <>
-                <strong> Dissertation: </strong>
-                <span>{dissertation}</span>, 
-                </>
-            )}
+            <div>
+                {/* Student Name */}
+                <a href="#" className="text-blue-500">{name}</a>,
 
-            {/* Current Institution */}
-            {now_at &&  (
-                <>
-                <strong><i> Now at: </i></strong>
-                <span>{now_at}</span>, 
-                </>
-            )}
+                {/* Title of Degree Completed */}
+                <span> {degree_completed} </span>
 
-            {/* Extra Info */}
-            <span> {extra} </span>
+                {/* Year of Degree Completion */}
+                {year_completed && <span> ({year_completed}), </span>}
+
+                {/* Co-Advisor */}
+                {co_advisor_name && (
+                    <>
+                    <strong>co-advised by </strong> 
+                    <span>{co_advisor_name}</span>, 
+                    </>
+                )}
+                
+                {/* Dissertation */}
+                {dissertation && (
+                    <>
+                    <strong> Dissertation: </strong>
+                    <span>{dissertation}</span>, 
+                    </>
+                )}
+
+                {/* Current Institution */}
+                {now_at &&  (
+                    <>
+                    <strong><i> Now at: </i></strong>
+                    <span>{now_at}</span>, 
+                    </>
+                )}
+
+                {/* Extra Info */}
+                <span> {extra} </span>
+            </div>
         </div>
     )
 }

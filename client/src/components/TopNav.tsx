@@ -22,7 +22,9 @@ const TopNav = () => {
         <>
             {isMobile ? (
                 <div className="py-3 px-4 flex justify-between items-center">
-                    <img className="w-32" src={Logo} alt="" />
+                    <Link to="/">
+                        <img className="w-32" src={Logo} alt="Lab Logo" />
+                    </Link>
                     <span 
                         onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         <CgMenuRight size={18} />
@@ -35,7 +37,7 @@ const TopNav = () => {
                             <CgClose  size={22}/>
                         </li>
                         <li className="p-2" onClick={()=>handleClick('/')}>
-                            <Link to="/">About</Link>
+                            <Link to="/">Home</Link>
                         </li>
                         <li className="p-2" onClick={()=>handleClick('/research')}>
                             <Link to="/research">Research</Link>
@@ -56,10 +58,12 @@ const TopNav = () => {
                 </div>
             ): (
                 <div className={`py-4 ${isTablet ? 'px-4' : 'px-16 tv:px-64'} flex justify-between items-center`}>
-                    <img className={`${isTablet && 'max-w-32'}`} src={Logo} alt="SMART LAB" />
+                    <Link to="/">
+                        <img className={`${isTablet && 'max-w-32'} cursor-pointer`} src={Logo} alt="SMART LAB" />
+                    </Link>
                     <ul className={`${!isTablet ? 'space-x-6 text-sm': 'text-xs'} flex shrink`}>
                         <li className="p-2 hover:bg-[#efefef]">
-                            <Link to="/">About</Link>
+                            <Link to="/">Home</Link>
                         </li>
                         <li className="p-2 hover:bg-[#efefef]">
                             <Link to="/research">Research</Link>

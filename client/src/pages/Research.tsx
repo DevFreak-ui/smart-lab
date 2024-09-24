@@ -1,6 +1,7 @@
 import ResearchBg from "../assets/images/research-bg.jpg"
 import Footer from "../components/Footer"
 import ResearchCloud from "../components/ResearchCloud"
+import { useMediaQuery } from 'usehooks-ts';
 
 interface StudentActivityProps {
     title: string;
@@ -8,6 +9,8 @@ interface StudentActivityProps {
 }
 
 const ResearchPage = () => {
+
+    const isMobile = useMediaQuery('(max-width: 480px)');
 
     const researchInterests = [
         { name: "Transportation Planning", percentage: 15 },
@@ -18,9 +21,9 @@ const ResearchPage = () => {
         { name: "Transportation Safety", percentage: 10 },
         { name: "Public Transportation", percentage: 5 },
         { name: "Congestion Management", percentage: 5 },
-        { name: "Digital Twins and Smart Cities", percentage: 5 },
-        { name: "Pavement and Asset Management", percentage: 5 },
-        { name: "Agriculture Technology", percentage: 2 },
+        { name: `${isMobile ? "Smart Cities" : "Digital Twins and Smart Cities"}`, percentage: 5 },
+        { name: `${isMobile ? "Asset Management" : "Pavement and Asset Management"}`, percentage: 5 },
+        { name: `${isMobile ? "Agri Tech" : "Agriculture Technology and AI"}`, percentage: 2 },
     ];
 
     const studentOpportunities = [
@@ -44,7 +47,7 @@ const ResearchPage = () => {
             <section className="w-4/5 md:w-3/5 mx-auto my-8 sm:my-16">
                 <h2 className="text-2xl font-bold mb-4">Our Research Focus</h2>
                 <p className="mb-6">
-                    We are interdisciplinary researchers Leveraging cutting-edge technologies to enhance transportation. 
+                    We are interdisciplinary researchers leveraging cutting-edge technologies to enhance transportation. 
                     Our research spans across various domains of transportation engineering and data science, 
                     where we develop innovative solutions to tackle large-scale, complex challenges in urban 
                     mobility, transportation safety, and sustainable infrastructure.
@@ -52,7 +55,7 @@ const ResearchPage = () => {
             </section>
 
             {/* RESEARCH CLOUD */}
-            <section className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 mb-16">
+            <section className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 mb-16 overflow-x-auto md:overflow-x-hidden">
                 <ResearchCloud interests={researchInterests} />
             </section>
 
