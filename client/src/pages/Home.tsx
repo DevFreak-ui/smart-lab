@@ -30,6 +30,11 @@ const HomePage = () => {
                 <p className="mt-8 text-lg lg:text-xl xl:text-2xl max-w-3xl z-20">
                 The <strong>S</strong>ustainable <strong>M</strong>obility and <strong>A</strong>dvanced <strong>R</strong>esearch in <strong>T</strong>ransportation Group
                 </p>
+                <div className="absolute bottom-0 left-0 text-white bg-yellow-500/80 w-full md:w-1/5 tv:w-full text-left text-md p-4 z-20">
+                    <p>Prospective students interested in joining the lab? 
+                        <Link className="mx-3 underline text-blue-500" to="/prospective-student-info">See this</Link>
+                    </p>
+                </div>
             </section>
 
             {/* PROFILE */}

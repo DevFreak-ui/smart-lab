@@ -8,7 +8,7 @@ import Kian from "../assets/images/profiles/Kian.png"
 import { PersonCard } from "../components/PersonCard"
 import { PersonGridCard } from "../components/PersonGridCard"
 import { useState } from 'react'
-import { BsViewStacked, BsViewList, BsGrid3X3GapFill } from "react-icons/bs"
+import { BsViewList, BsGrid3X3GapFill } from "react-icons/bs"
 
 const ViewIcon = ({ mode, currentMode }: { mode: string; currentMode: string }) => {
   const isActive = mode === currentMode
@@ -18,9 +18,6 @@ const ViewIcon = ({ mode, currentMode }: { mode: string; currentMode: string }) 
         <BsViewList />
       )}
       {mode === 'B' && (
-        <BsViewStacked />
-      )}
-      {mode === 'C' && (
         <BsGrid3X3GapFill />
       )}
     </svg>
@@ -47,7 +44,7 @@ const PeoplesPage = () => {
 
             {/* Toggle Buttons */}
             <div className="flex justify-center pt-8 space-x-4">
-                {['A', 'B', 'C'].map((mode) => (
+                {['A', 'B'].map((mode) => (
                     <button key={mode} onClick={() => toggleView(mode)} className={`flex items-center space-x-2 ${viewMode === mode ? 'text-indigo-600' : 'text-gray-400'}`}>
                         <ViewIcon mode={mode} currentMode={viewMode} />
                     </button>
@@ -55,92 +52,6 @@ const PeoplesPage = () => {
             </div>
 
             {viewMode === 'A' && (
-                // Original view
-                <>
-                    {/* FACULTY */}
-                    <section className="my-12 sm:my-20 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
-                        <h1 className="text-xl font-medium mb-12">Faculty</h1>
-                        
-                        <FacultyCard 
-                            image_src={Armstrong}
-                            title="PI - Armstrong Aboah"
-                            role="Assistant Professor, Civil Engineering"
-                            email="aboah1994@gmail.com"
-                            coordinates="Civil Engineering Building, CE 201D"
-                            ofc_phone="9312847657"
-                            g_scholar_link="https://scholar.google.com/citations?user=Ev1PAAwAAAAJ&hl=en&oi=ao"
-                            cv_link="https://aboah1994.github.io/images/aboah_cv_20240310.pdf"
-                            github="https://github.com/aboah1994"
-                            linkedIn="https://www.linkedin.com/in/armstrong-aboah-ph-d-5ab809142/"
-                            />
-                        <hr className="bg-gray-300 my-6 md:my-12" />
-                    </section>
-
-                    {/* STUDENTS */}
-                    <section className="my-12 md:my-24 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
-                        <h1 className="text-xl font-medium mb-8">PhD Students</h1>
-                        
-                        <div className="grid lg:grid-cols-2 gap-x-24 gap-y-12">
-                            <StudentCard 
-                                name="Blessing Agyei Kyem"
-                                res_interests="Computer Vision, Multimodal Ai, Applications in Transport Systems"
-                                image_src={Blessing}
-                                linkedIn="https://www.linkedin.com/in/blessing-agyei-kyem-b258121a8"
-                                github="https://github.com/blessing-agyei-kyem"
-                                site="https://blessing-agyei-kyem.github.io/"
-                                />
-                            <StudentCard
-                                name="Joshua Asamoah"
-                                res_interests="Transport Systems, IoT"
-                                image_src={Joshua}
-                                linkedIn="https://www.linkedin.com/in/joshua-kofi-asamoah-1ba4091a2/"
-                                />
-                            <StudentCard 
-                                name="Eugene Denteh"
-                                res_interests="Multimodal AI, Healthcare Applications, Computer Vision, NLP"
-                                extra="Joining Fall 2024"
-                                />
-                        </div>
-                    </section>
-
-                    {/* OTHERS(MASTERS & UNDERGRADS) */}
-                    <section className="my-24 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
-                        <h1 className="text-xl font-medium mb-8">Masters & Undergraduates</h1>
-                        
-                        <div className="grid md:grid-cols-2 gap-x-24 gap-y-12">
-                            <StudentCard 
-                                name="Kian Ansarinejad"
-                                res_interests="Transport Systems"
-                                image_src={Kian}
-                                extra="Currently a Masters Student at X university"
-                                />
-                        </div>
-                    </section>
-
-                    {/* VISITORS */}
-                    {/* <section className="my-24 w-3/5 md:w-3/5 tv:w-2/5 mx-auto">
-                        <h1 className="text-xl font-medium mb-6">Visitors</h1>
-
-                        <p className="text-gray-400 text-sm"> -- No data --</p>
-
-                    </section> */}
-
-                    {/* ALUMNI */}
-                    <section className="my-24 w-4/5 md:w-3/5 tv:w-2/5 mx-auto">
-                        <h1 className="text-xl font-medium mb-6">Alumni</h1>
-                        
-                        <AlumniCard 
-                            name="Fatima Ezahra Chrit"
-                            degree_completed="PhD Mechanical Engineering"
-                            year_completed="2023"
-                            co_advisor_name="A. Alexeev"
-                            dissertation="Modeling and simulation of cells and particles in microfluidic channels"
-                            now_at="IronCAD"/>
-                    </section>
-                </>
-            )}
-
-            {viewMode === 'B' && (
                 // Detailed card view
                 <div className="w-4/5 md:w-3/5 tv:w-2/5 mx-auto my-12">
                     <div className="space-y-12">
@@ -157,7 +68,7 @@ const PeoplesPage = () => {
                                             Yaw Adu-Gyamfi, and has been at the forefront of integrating data-driven approaches into 
                                             transportation research and education."
                                 interests="Sustainable transportation, Smart cities, AI in civil engineering, Big Data Analytics, Traffic Optimization"
-                                email="aboah1994@gmail.com"
+                                f_email="aboah1994@gmail.com"
                                 github="https://github.com/aboah1994"
                                 website="https://aboah1994.github.io/"
                             />
@@ -236,7 +147,7 @@ const PeoplesPage = () => {
                 </div>
             )}
 
-            {viewMode === 'C' && (
+            {viewMode === 'B' && (
                 // Grid view
                 <div className="w-4/5 mx-auto my-12">
                     

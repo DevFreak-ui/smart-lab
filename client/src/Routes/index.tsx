@@ -6,6 +6,7 @@ import ActivitiesPage from "../pages/Activities"
 import PeoplesPage from "../pages/People"
 import ResearchPage from "../pages/Research"
 import PublicationsPage from "../pages/Publication"
+import ProspectiveStudent from "../pages/prostectiveStudents"
 
 const AppRoutes = () => {
 
@@ -19,6 +20,7 @@ const AppRoutes = () => {
                 <Route path="/activities" element={<ActivitiesPage />} />
                 <Route path="/news" element={<NewsPage />} />
                 <Route path="/people" element={<PeoplesPage />} />
+                <Route path="/prospective-student-info" element={<ProspectiveStudent />} />
             </Route>
 
         </Routes>

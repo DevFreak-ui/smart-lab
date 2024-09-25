@@ -60,14 +60,14 @@ const ResearchPage = () => {
             </section>
 
             {/* STUDENT OPPORTUNITIES */}
-            <section className="my-12 md:my-32 p-4 w-4/5 md:w-3/5 tv:w-2/5 mx-auto bg-gray-100/50 rounded-lg">
+            {/* <section className="my-12 md:my-32 p-4 w-4/5 md:w-3/5 tv:w-2/5 mx-auto bg-gray-100/50 rounded-lg">
                 <h2 className="text-xl lg:text-2xl xl:text-3xl font-medium mb-8 text-center">Student Opportunities</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {studentOpportunities.map((opportunity, index) => (
                         <StudentActivity key={index} {...opportunity} />
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             {/* FOOTER */}
             <Footer />

@@ -8,6 +8,7 @@ interface PersonCardProps {
     background: string
     interests: string
     email?: string
+    f_email?: string
     github?: string
     linkedin?: string
     website?: string
@@ -20,6 +21,7 @@ export const PersonCard: React.FC<PersonCardProps> = ({
     background,
     interests,
     email,
+    f_email,
     github,
     linkedin,
     website,
@@ -41,6 +43,15 @@ export const PersonCard: React.FC<PersonCardProps> = ({
                 <div className="flex sm:space-x-4 mt-6 flex-wrap">
                     {email && (
                         <a href={`mailto:${email}`} className="text-sm sm:text-base bg-blue-500 text-white m-1 px-3 sm:px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-blue-600 transition-colors duration-300">
+                            <MdEmail />
+                            <span>Email</span>
+                        </a>
+                    )}
+                    {f_email && (
+                        <a rel="noopener noreferrer" className="text-sm sm:text-base bg-gray-800 text-white m-1 px-3 sm:px-4 py-py-2 rounded-full flex items-center space-x-2 hover:bg-gray-900 transition-colors duration-300" href="https://mailhide.io/e/rHMy8YKE" onClick={(e) => { 
+                            e.preventDefault(); 
+                            window.open('https://mailhide.io/e/rHMy8YKE', 'mailhidepopup', 'width=580,height=635'); 
+                        }}>
                             <MdEmail />
                             <span>Email</span>
                         </a>
