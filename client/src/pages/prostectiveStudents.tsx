@@ -1,10 +1,10 @@
 const ProspectiveStudents = () => {
     return (
-        <div className="w-4/5 mx-auto md:w-1/2  text-justify p-6 text-gray-800">
+        <div className="w-4/5 mx-auto md:w-1/2 tv:w-2/5 pt-8 tv:pt-24 p-6 text-gray-800">
             <h1 className="text-3xl font-bold mb-6">Information for Prospective Students</h1>
 
             {/* Prospective PhD Students Section */}
-            <section className="mb-8">
+            <section className="mb-8 text-justify">
                 <p>
                     <span className="font-bold">Prospective PhD Students: {' '}</span>
                     We welcome applications from motivated individuals interested in pursuing a PhD in our lab. 
@@ -42,7 +42,7 @@ const ProspectiveStudents = () => {
             {/* Prospective Master's Students Section */}
             <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">Undergraduate and Master's Students</h2>
-                <p>
+                <p className="text-justify">
                     For master's and undergraduate students at NDSU interested in working with me, send me an email
                     with your CV and topics you are interested in working on. use the subject line "NDSU student seeking collaboration".
                     Apply to NDSU if you are not a student and send me an email once you are admitted.
