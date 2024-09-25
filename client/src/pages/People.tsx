@@ -1,5 +1,5 @@
 import HeroBg from "../assets/images/people-hero-bg.png"
-import { FacultyCard, StudentCard, AlumniCard } from "../components/PeopleCard"
+import { StudentCard, AlumniCard } from "../components/PeopleCard"
 import Armstrong from "../assets/images/profiles/pi.png"
 import Blessing from "../assets/images/profiles/blessing.png"
 import Joshua from "../assets/images/profiles/joshua.png"

@@ -3,10 +3,10 @@ import Footer from "../components/Footer"
 import ResearchCloud from "../components/ResearchCloud"
 import { useMediaQuery } from 'usehooks-ts';
 
-interface StudentActivityProps {
-    title: string;
-    description: React.ReactNode;
-}
+// interface StudentActivityProps {
+//     title: string;
+//     description: React.ReactNode;
+// }
 
 const ResearchPage = () => {
 
@@ -26,11 +26,11 @@ const ResearchPage = () => {
         { name: `${isMobile ? "Agri Tech" : "Agriculture Technology and AI"}`, percentage: 2 },
     ];
 
-    const studentOpportunities = [
-        { title: "Graduate Research", description: "PhD and MS students lead their own research projects under faculty mentorship." },
-        { title: "Undergraduate Research", description: "We offer research opportunities for motivated undergraduate students to gain hands-on experience." },
-        { title: "Internships", description: `We currently do not have internship opportunities. Check back later.` },
-    ];
+    // const studentOpportunities = [
+    //     { title: "Graduate Research", description: "PhD and MS students lead their own research projects under faculty mentorship." },
+    //     { title: "Undergraduate Research", description: "We offer research opportunities for motivated undergraduate students to gain hands-on experience." },
+    //     { title: "Internships", description: `We currently do not have internship opportunities. Check back later.` },
+    // ];
 
     return (
         <div className="text-black/80">
@@ -76,11 +76,11 @@ const ResearchPage = () => {
     )
 }
 
-const StudentActivity = ({ title, description }: StudentActivityProps) => (
-    <div className="bg-white p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
-    </div>
-);
+// const StudentActivity = ({ title, description }: StudentActivityProps) => (
+//     <div className="bg-white p-6 rounded-lg shadow-md">
+//         <h3 className="text-xl font-semibold mb-2">{title}</h3>
+//         <p className="text-gray-600">{description}</p>
+//     </div>
+// );
 
 export default ResearchPage
