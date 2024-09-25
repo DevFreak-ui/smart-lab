@@ -78,7 +78,7 @@ const ResearchCloud: React.FC<ResearchCloudProps> = ({ interests }) => {
     }
 
     return (
-        <div className="relative w-full h-[400px] sm:h-[700px] md:h-[710px]">
+        <div className="relative w-full h-[450px] sm:h-[700px] md:h-[710px]">
             <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
                 {positions.map((pos, index) => (
                     <line

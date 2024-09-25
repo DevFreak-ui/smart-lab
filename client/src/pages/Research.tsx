@@ -3,10 +3,10 @@ import Footer from "../components/Footer"
 import ResearchCloud from "../components/ResearchCloud"
 import { useMediaQuery } from 'usehooks-ts';
 
-interface StudentActivityProps {
-    title: string;
-    description: React.ReactNode;
-}
+// interface StudentActivityProps {
+//     title: string;
+//     description: React.ReactNode;
+// }
 
 const ResearchPage = () => {
 
@@ -26,11 +26,11 @@ const ResearchPage = () => {
         { name: `${isMobile ? "Agri Tech" : "Agriculture Technology and AI"}`, percentage: 2 },
     ];
 
-    const studentOpportunities = [
-        { title: "Graduate Research", description: "PhD and MS students lead their own research projects under faculty mentorship." },
-        { title: "Undergraduate Research", description: "We offer research opportunities for motivated undergraduate students to gain hands-on experience." },
-        { title: "Internships", description: `We currently do not have internship opportunities. Check back later.` },
-    ];
+    // const studentOpportunities = [
+    //     { title: "Graduate Research", description: "PhD and MS students lead their own research projects under faculty mentorship." },
+    //     { title: "Undergraduate Research", description: "We offer research opportunities for motivated undergraduate students to gain hands-on experience." },
+    //     { title: "Internships", description: `We currently do not have internship opportunities. Check back later.` },
+    // ];
 
     return (
         <div className="text-black/80">
@@ -60,14 +60,14 @@ const ResearchPage = () => {
             </section>
 
             {/* STUDENT OPPORTUNITIES */}
-            <section className="my-12 md:my-32 p-4 w-4/5 md:w-3/5 tv:w-2/5 mx-auto bg-gray-100/50 rounded-lg">
+            {/* <section className="my-12 md:my-32 p-4 w-4/5 md:w-3/5 tv:w-2/5 mx-auto bg-gray-100/50 rounded-lg">
                 <h2 className="text-xl lg:text-2xl xl:text-3xl font-medium mb-8 text-center">Student Opportunities</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {studentOpportunities.map((opportunity, index) => (
                         <StudentActivity key={index} {...opportunity} />
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             {/* FOOTER */}
             <Footer />
@@ -76,11 +76,11 @@ const ResearchPage = () => {
     )
 }
 
-const StudentActivity = ({ title, description }: StudentActivityProps) => (
-    <div className="bg-white p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
-    </div>
-);
+// const StudentActivity = ({ title, description }: StudentActivityProps) => (
+//     <div className="bg-white p-6 rounded-lg shadow-md">
+//         <h3 className="text-xl font-semibold mb-2">{title}</h3>
+//         <p className="text-gray-600">{description}</p>
+//     </div>
+// );
 
 export default ResearchPage
