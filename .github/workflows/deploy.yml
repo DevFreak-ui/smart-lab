@@ -3,7 +3,7 @@ on:
     branches:
       - production
     paths:
-      - "client/**"
+      - "**/client/**"  # Adjusted to match the new structure
 name: 🚀 Deploy website on push
 
 jobs:
