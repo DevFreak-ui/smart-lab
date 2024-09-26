@@ -1,7 +1,13 @@
-import { Outlet } from "react-router-dom"
-import TopNav from "../components/TopNav"
+import { Outlet, useLocation } from "react-router-dom";
+import TopNav from "../components/TopNav";
+import { useEffect } from "react";
 
 const Container = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
 
     return(
         <>

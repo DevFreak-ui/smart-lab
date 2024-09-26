@@ -48,7 +48,7 @@ export const PersonCard: React.FC<PersonCardProps> = ({
                         </a>
                     )}
                     {f_email && (
-                        <a rel="noopener noreferrer" className="text-sm sm:text-base bg-gray-800 text-white m-1 px-3 sm:px-4 py-py-2 rounded-full flex items-center space-x-2 hover:bg-gray-900 transition-colors duration-300" href="https://mailhide.io/e/rHMy8YKE" onClick={(e) => { 
+                        <a rel="noopener noreferrer" className="text-sm sm:text-base text-white m-1 px-3 sm:px-4 py-2 rounded-full flex items-center space-x-2 bg-gray-800 hover:bg-gray-900 transition-colors duration-300" href="https://mailhide.io/e/rHMy8YKE" onClick={(e) => { 
                             e.preventDefault(); 
                             window.open('https://mailhide.io/e/rHMy8YKE', 'mailhidepopup', 'width=580,height=635'); 
                         }}>
@@ -57,7 +57,7 @@ export const PersonCard: React.FC<PersonCardProps> = ({
                         </a>
                     )}
                     {github && (
-                        <a href={github} target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base bg-gray-800 text-white m-1 px-3 sm:px-4 py-py-2 rounded-full flex items-center space-x-2 hover:bg-gray-900 transition-colors duration-300">
+                        <a href={github} target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-white m-1 px-3 sm:px-4 py-2 rounded-full flex items-center space-x-2 bg-gray-800 hover:bg-gray-900 transition-colors duration-300">
                             <FaGithub />
                             <span>GitHub</span>
                         </a>
