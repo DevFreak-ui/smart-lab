@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ndsuxvcf/public_html/repositories/smart-lab
+    - export DEPLOYPATH=/home/ndsuxvcf/repositories/smart-lab
     - /bin/cp -R client $DEPLOYPATH
